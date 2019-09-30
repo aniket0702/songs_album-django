@@ -88,6 +88,7 @@ def delete_song(request, album_id, song_id):
 def detail(request, album_id):
     if not request.user.is_authenticated():
         return render(request, 'music/login.html')
+        #Takes back to the login page
     else:
         user = request.user
         album = get_object_or_404(Album, pk=album_id)
