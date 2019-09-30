@@ -8,7 +8,7 @@ from .models import Album, Song
 
 AUDIO_FILE_TYPES = ['wav', 'mp3', 'ogg']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
-
+# Only these files supported and not others. 
 
 def create_album(request):
     if not request.user.is_authenticated():
