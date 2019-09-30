@@ -38,7 +38,7 @@ def create_album(request):
 
 def create_song(request, album_id):
     form = SongForm(request.POST or None, request.FILES or None)
-    album = get_object_or_404(Album, pk=album_id)
+    album = get_object_or_404(Album, pk=album_id) # Checks whether the album with given primary key even exist.
     if form.is_valid():
         albums_songs = album.song_set.all()
         for s in albums_songs:
